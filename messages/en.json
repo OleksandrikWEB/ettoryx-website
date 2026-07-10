@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "defaultTitle": "ettoryx — Custom & Outsourcing Development",
+    "defaultDescription": "ettoryx is an IT company building custom products and providing outsourcing development: CRM, ERP, websites, cross-platform apps, digital ecosystems and AI automation."
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "portfolio": "Portfolio",
+    "career": "Career",
+    "team": "Team",
+    "contacts": "Contacts"
+  },
+  "cta": {
+    "discussProject": "Discuss a Project",
+    "freeConsultation": "Free Consultation",
+    "ourWork": "Our Work",
+    "moreAboutUs": "More about us",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "visitProduct": "Visit product site",
+    "allServices": "All services",
+    "applyNow": "Apply now",
+    "send": "Send message",
+    "sending": "Sending…",
+    "backHome": "Back to home",
+    "viewOpenings": "View openings",
+    "getStarted": "Start a project"
+  },
+  "header": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "hero": {
+      "badge": "Custom development & outsourcing",
+      "title": "We build software that moves business forward",
+      "subtitle": "ettoryx crafts premium custom products and delivers reliable outsourcing development — from CRM and ERP to cross-platform apps and AI automation.",
+      "trustline": "Trusted by product teams across Europe"
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Services built for scale",
+      "subtitle": "Six directions covering the full lifecycle of your digital product."
+    },
+    "about": {
+      "eyebrow": "Who we are",
+      "title": "A software house, not a starter studio",
+      "text": "We partner with founders and enterprises to turn ambitious ideas into dependable software. Our teams own the outcome — strategy, engineering and design under one roof."
+    },
+    "products": {
+      "eyebrow": "Our products",
+      "title": "Products we build and run",
+      "subtitle": "Ready-to-adopt platforms born from real client work."
+    },
+    "portfolio": {
+      "eyebrow": "Selected work",
+      "title": "Impact we delivered",
+      "subtitle": "A few of the products we shipped and the numbers behind them."
+    },
+    "stats": {
+      "eyebrow": "By the numbers",
+      "title": "Impact in numbers"
+    },
+    "tech": {
+      "title": "A modern, battle-tested stack"
+    },
+    "trust": {
+      "title": "Teams that trust us",
+      "badges": "Recognized on Clutch, Upwork and industry certifications"
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What clients say"
+    },
+    "finalCta": {
+      "title": "Let's build something great",
+      "subtitle": "Tell us about your project — we respond within 24 hours."
+    }
+  },
+  "services": {
+    "hero": {
+      "eyebrow": "Services",
+      "title": "Everything you need to ship and scale",
+      "subtitle": "From first prototype to a full digital ecosystem — one accountable partner."
+    },
+    "detail": {
+      "problem": "The problem",
+      "solution": "Our solution",
+      "process": "How we work",
+      "technologies": "Technologies",
+      "relatedCases": "Related work",
+      "faq": "Frequently asked questions"
+    }
+  },
+  "products": {
+    "hero": {
+      "eyebrow": "Products",
+      "title": "Platforms we own and evolve",
+      "subtitle": "Built from real client challenges, ready to adopt in yours."
+    }
+  },
+  "portfolio": {
+    "hero": {
+      "eyebrow": "Portfolio",
+      "title": "Case studies",
+      "subtitle": "Selected projects, real challenges and measurable results."
+    },
+    "all": "All",
+    "detail": {
+      "challenge": "The challenge",
+      "solution": "The solution",
+      "technologies": "Technologies used",
+      "results": "Results",
+      "gallery": "Gallery",
+      "nextCase": "Next case"
+    }
+  },
+  "team": {
+    "hero": {
+      "eyebrow": "Team",
+      "title": "The people behind ettoryx",
+      "subtitle": "Engineers, designers and strategists who own your outcome."
+    },
+    "leadership": "Leadership",
+    "everyone": "The team"
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "About us",
+      "title": "We turn ideas into dependable software",
+      "subtitle": "ettoryx is a full-cycle IT company operating in custom product development and outsourcing."
+    },
+    "mission": { "title": "Our mission", "text": "To give businesses software they can rely on — crafted with the polish of a product studio and the discipline of an engineering house." },
+    "values": { "title": "What we value", "items": { "quality": { "t": "Quality over hype", "d": "We ship things that last, not demos." }, "ownership": { "t": "Ownership", "d": "We own outcomes, not just tickets." }, "transparency": { "t": "Transparency", "d": "Weekly demos, clear communication, no surprises." }, "partnership": { "t": "Long-term partnership", "d": "Most of our clients stay for years." } } },
+    "why": { "title": "Why choose us", "items": { "one": "Senior-heavy teams", "two": "Product & engineering under one roof", "three": "Transparent, milestone-based delivery", "four": "European quality, competitive rates" } },
+    "geography": { "title": "Clients across Europe", "text": "We work with product teams and enterprises in Ukraine, the EU and beyond." }
+  },
+  "career": {
+    "hero": {
+      "eyebrow": "Career",
+      "title": "Build your career at ettoryx",
+      "subtitle": "Join a senior team that values craft, ownership and growth."
+    },
+    "benefits": { "title": "Why work with us", "items": { "flexible": "Flexible remote-first work", "growth": "Real growth & learning budget", "projects": "Meaningful, modern projects", "team": "A supportive senior team" } },
+    "openings": "Open positions",
+    "noOpenings": "No open positions right now — send us your CV anyway.",
+    "detail": {
+      "about": "About the role",
+      "requirements": "Requirements",
+      "offer": "What we offer",
+      "apply": "Apply for this role"
+    },
+    "meta": {
+      "department": "Department",
+      "format": "Format",
+      "location": "Location"
+    }
+  },
+  "contacts": {
+    "hero": {
+      "eyebrow": "Contacts",
+      "title": "Let's talk about your project",
+      "subtitle": "Fill in the form or reach us directly — we respond within 24 hours."
+    },
+    "info": {
+      "title": "Contact information",
+      "email": "Email",
+      "phone": "Phone",
+      "messengers": "Messengers",
+      "address": "Address",
+      "addressValue": "Kyiv, Ukraine (placeholder)",
+      "phoneValue": "+380 (00) 000-00-00",
+      "responseTime": "We respond within 24 hours",
+      "mapPlaceholder": "Map placeholder"
+    }
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone / Messenger",
+    "phoneOptional": "Phone / Messenger (optional)",
+    "service": "Service / Direction",
+    "servicePlaceholder": "Select a direction",
+    "budget": "Budget range",
+    "budgetPlaceholder": "Select a range",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your project…",
+    "cv": "CV (PDF / DOC)",
+    "cvHint": "PDF or DOC, up to 10 MB",
+    "consent": "I agree to the processing of my data per the",
+    "privacyLink": "Privacy Policy",
+    "budgets": {
+      "small": "Up to $10k",
+      "medium": "$10k – $30k",
+      "large": "$30k – $75k",
+      "xl": "$75k+"
+    },
+    "errors": {
+      "name": "Please enter your name",
+      "email": "Please enter a valid email",
+      "message": "Please enter a message (at least 10 characters)",
+      "service": "Please select a direction",
+      "consent": "You must accept the privacy policy",
+      "cv": "Please attach your CV"
+    }
+  },
+  "thankYou": {
+    "title": "Thank you!",
+    "subtitle": "Your message has been received. Our team will get back to you within 24 hours.",
+    "backHome": "Back to home",
+    "exploreServices": "Explore our services"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "The page you're looking for doesn't exist or has moved.",
+    "backHome": "Back to home"
+  },
+  "cookie": {
+    "text": "We use cookies to improve your experience and analyze traffic.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "policy": "Privacy policy"
+  },
+  "footer": {
+    "tagline": "Premium custom development and reliable outsourcing for ambitious businesses.",
+    "ctaTitle": "Have a project in mind?",
+    "nav": "Navigation",
+    "company": "Company",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "responseNote": "We respond within 24 hours"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: June 2026",
+    "intro": "This placeholder privacy policy describes how ettoryx handles your data. Replace with your legally reviewed policy before launch.",
+    "sections": {
+      "data": { "t": "Data we collect", "d": "Contact details you submit via our forms (name, email, phone, message and CV files)." },
+      "use": { "t": "How we use it", "d": "Solely to respond to your inquiry and, for applications, to evaluate your candidacy." },
+      "share": { "t": "Sharing", "d": "We do not sell your data. It may be processed by trusted infrastructure providers." },
+      "rights": { "t": "Your rights", "d": "You may request access, correction or deletion of your data at any time." },
+      "contact": { "t": "Contact", "d": "For privacy questions, email info@ettoryx.com." }
+    }
+  }
+}
