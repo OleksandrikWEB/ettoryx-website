@@ -18,6 +18,7 @@ function Logo() {
       className="flex items-center gap-2.5"
       data-testid="logo-home-link"
       aria-label="ettoryx — home"
+
     >
       <Image
         src="/logo-mark.png"
@@ -29,7 +30,7 @@ function Logo() {
       />
       <span className="flex flex-col leading-none">
         <span className="font-display text-lg font-extrabold tracking-tight text-ink-primary">
-          CASTERYX
+          ettoryx
         </span>
         <span className="mt-0.5 text-[0.58rem] font-medium uppercase tracking-[0.38em] text-gold-light">
           Solutions
