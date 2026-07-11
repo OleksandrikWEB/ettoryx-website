@@ -129,7 +129,7 @@ export function TeamCard({ member, locale }: { member: TeamMember; locale: Local
             alt={`Team member portrait — ${member.name}`}
             width={640}
             height={640}
-            className="h-full w-full object-cover object-top grayscale transition-[filter,transform] duration-500 group-hover:grayscale-0 group-hover:scale-105"
+            className="h-full w-full object-cover object-top"
           />
         </div>
       ) : (
