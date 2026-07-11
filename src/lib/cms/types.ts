@@ -66,6 +66,7 @@ export interface TeamMember {
   bio: LocalizedString;
   leadership: boolean;
   linkedin: string;
+  photo?: string;
 }
 
 export interface JobListing {

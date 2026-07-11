@@ -318,20 +318,22 @@ export const caseStudies: CaseStudy[] = [
 
 export const team: TeamMember[] = [
   {
-    slug: "andrii-melnyk",
-    name: "Andrii Melnyk",
-    role: { uk: "CEO та засновник", en: "CEO & Founder" },
-    bio: { uk: "15+ років у продуктовій розробці та управлінні командами.", en: "15+ years in product engineering and team leadership." },
+    slug: "oleksandr-hoian",
+    name: "Oleksandr Hoian",
+    role: { uk: "Співзасновник і CEO", en: "Co-Founder & CEO" },
+    bio: { uk: "Веде продуктове бачення, стратегію та партнерства з клієнтами.", en: "Drives product vision, strategy and client partnerships." },
     leadership: true,
     linkedin: "#",
+    photo: "/team/oleksandr.png",
   },
   {
-    slug: "iryna-koval",
-    name: "Iryna Koval",
-    role: { uk: "CTO", en: "CTO" },
-    bio: { uk: "Архітектор масштабованих систем і хмарних рішень.", en: "Architect of scalable systems and cloud solutions." },
+    slug: "mykola-plikhtiak",
+    name: "Mykola Plikhtiak",
+    role: { uk: "Співзасновник і CTO", en: "Co-Founder & CTO" },
+    bio: { uk: "Архітектор масштабованих систем та AI-рішень.", en: "Architect of scalable systems and AI solutions." },
     leadership: true,
     linkedin: "#",
+    photo: "/team/mykola.png",
   },
   {
     slug: "jane-doe",
