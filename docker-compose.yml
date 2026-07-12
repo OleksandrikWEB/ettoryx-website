@@ -4,7 +4,7 @@ services:
     container_name: next-app
     restart: unless-stopped
     expose:
-      - "3000"
+      - '3000'
     environment:
       - NODE_ENV=production
     env_file:
@@ -17,10 +17,10 @@ services:
     container_name: nginx
     restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
+      - '80:80'
+      - '443:443'
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
     depends_on:
