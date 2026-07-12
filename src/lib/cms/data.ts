@@ -630,9 +630,10 @@ export const team: TeamMember[] = [
     slug: 'oleksandr-hoian',
     name: 'Oleksandr Hoian',
     role: { uk: 'Співзасновник і CTO', en: 'Co-Founder & CTO' },
+
     bio: {
-      uk: 'Веде продуктове бачення, стратегію та партнерства з клієнтами.',
-      en: 'Drives product vision, strategy and client partnerships.',
+      uk: 'Архітектор масштабованих систем та AI-рішень.',
+      en: 'Architect of scalable systems and AI solutions.',
     },
     leadership: true,
     linkedin: '#',
@@ -643,8 +644,8 @@ export const team: TeamMember[] = [
     name: 'Mykola Plikhtiak',
     role: { uk: 'Співзасновник і CEO', en: 'Co-Founder & CEO' },
     bio: {
-      uk: 'Архітектор масштабованих систем та AI-рішень.',
-      en: 'Architect of scalable systems and AI solutions.',
+      uk: 'Веде продуктове бачення, стратегію та партнерства з клієнтами.',
+      en: 'Drives product vision, strategy and client partnerships.',
     },
     leadership: true,
     linkedin: '#',
