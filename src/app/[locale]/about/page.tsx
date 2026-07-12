@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { Check, Target, ShieldCheck, Eye, Handshake } from "lucide-react";
 import type { Locale } from "@/i18n/routing";
@@ -53,7 +54,15 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <Placeholder alt="ettoryx working process" ratio="4/3" label="Process photo" />
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-line">
+              <Image
+                src="/mission.png"
+                alt="ettoryx engineering team at work"
+                width={1264}
+                height={848}
+                className="h-full w-full object-cover"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
