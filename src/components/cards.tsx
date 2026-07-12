@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, ArrowRight, MapPin, Briefcase } from "lucide-react";
 import type { Locale } from "@/i18n/routing";
@@ -121,12 +122,24 @@ export function CaseCard({ item, locale }: { item: CaseStudy; locale: Locale }) 
 export function TeamCard({ member, locale }: { member: TeamMember; locale: Locale }) {
   return (
     <div className="group" data-testid={`team-card-${member.slug}`}>
-      <Placeholder
-        alt={`Team member portrait — ${member.name}`}
-        ratio="1/1"
-        icon={false}
-        className="mb-4 grid place-items-center"
-      />
+      {member.photo ? (
+        <div className="mb-4 aspect-square overflow-hidden rounded-2xl border border-line bg-bg-secondary">
+          <Image
+            src={member.photo}
+            alt={`Team member portrait — ${member.name}`}
+            width={640}
+            height={640}
+            className="h-full w-full object-cover object-top"
+          />
+        </div>
+      ) : (
+        <Placeholder
+          alt={`Team member portrait — ${member.name}`}
+          ratio="1/1"
+          icon={false}
+          className="mb-4 grid place-items-center"
+        />
+      )}
       <div className="flex items-center justify-between">
         <div>
           <h3 className="font-display text-h6 text-ink-primary">{member.name}</h3>

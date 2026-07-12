@@ -6,6 +6,7 @@ import { buildAlternates, buildPersonSchema, buildCanonicalUrl, BASE } from "@/l
 import { PageHero } from "@/components/PageHero";
 import { RevealGroup, RevealItem, Reveal } from "@/components/Reveal";
 import { SectionHeader, TeamCard } from "@/components/cards";
+import { LeadershipSlider } from "@/components/LeadershipSlider";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -47,11 +48,9 @@ export default async function TeamPage({ params }: { params: Promise<{ locale: s
 
       <section className="container-x py-16 lg:py-20">
         <Reveal><SectionHeader title={t("team.leadership")} /></Reveal>
-        <RevealGroup className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {leadership.map((m) => (
-            <RevealItem key={m.slug}><TeamCard member={m} locale={locale} /></RevealItem>
-          ))}
-        </RevealGroup>
+        <div className="mt-10">
+          <LeadershipSlider members={leadership} locale={locale} />
+        </div>
       </section>
 
       <section className="container-x pb-16 lg:pb-20">

@@ -79,11 +79,11 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a
-                  href="mailto:info@casteryx.com"
+                  href="mailto:info@ettoryx.com"
                   className="inline-flex items-center gap-1 text-body text-ink-secondary transition-colors hover:text-gold-light"
                   data-testid="footer-email"
                 >
-                  info@casteryx.com <ArrowUpRight className="h-3.5 w-3.5" />
+                  info@ettoryx.com <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
               </li>
               <li className="text-body text-ink-secondary">{t("footer.responseNote")}</li>
