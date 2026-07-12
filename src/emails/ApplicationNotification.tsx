@@ -86,7 +86,7 @@ export function ApplicationNotification({
               Позиція: <strong style={{ color: DARK }}>{jobTitle}</strong>
               {' · '}
               <Link
-                href={`https://ettoryx.com/uk/career/${jobSlug}`}
+                href={`https://ettoryx.com/uk/team/${jobSlug}`}
                 style={{ color: GOLD, fontSize: 13 }}
               >
                 Переглянути вакансію

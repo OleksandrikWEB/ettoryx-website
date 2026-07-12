@@ -8,7 +8,7 @@ import {
   LayoutGrid,
   Cloud,
   type LucideIcon,
-} from "lucide-react";
+} from 'lucide-react';
 
 export const iconMap: Record<string, LucideIcon> = {
   Users,
@@ -26,10 +26,9 @@ export function getIcon(name: string): LucideIcon {
 }
 
 export const navItems = [
-  { key: "about", href: "/about" },
-  { key: "services", href: "/services" },
-  { key: "products", href: "/products" },
-  { key: "portfolio", href: "/portfolio" },
-  { key: "career", href: "/career" },
-  { key: "contacts", href: "/contacts" },
+  { key: 'about', href: '/about' },
+  { key: 'services', href: '/services' },
+  { key: 'products', href: '/products' },
+  { key: 'portfolio', href: '/portfolio' },
+  { key: 'contacts', href: '/contacts' },
 ] as const;

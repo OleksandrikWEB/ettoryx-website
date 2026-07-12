@@ -8,7 +8,6 @@
     "services": "Services",
     "products": "Products",
     "portfolio": "Portfolio",
-    "career": "Career",
     "team": "Team",
     "contacts": "Contacts"
   },
@@ -132,30 +131,43 @@
       "title": "We turn ideas into dependable software",
       "subtitle": "ettoryx is a full-cycle IT company operating in custom product development and outsourcing."
     },
-    "mission": { "title": "Our mission", "text": "To give businesses software they can rely on — crafted with the polish of a product studio and the discipline of an engineering house." },
-    "values": { "title": "What we value", "items": { "quality": { "t": "Quality over hype", "d": "We ship things that last, not demos." }, "ownership": { "t": "Ownership", "d": "We own outcomes, not just tickets." }, "transparency": { "t": "Transparency", "d": "Weekly demos, clear communication, no surprises." }, "partnership": { "t": "Long-term partnership", "d": "Most of our clients stay for years." } } },
-    "why": { "title": "Why choose us", "items": { "one": "Senior-heavy teams", "two": "Product & engineering under one roof", "three": "Transparent, milestone-based delivery", "four": "European quality, competitive rates" } },
-    "geography": { "title": "Clients across Europe", "text": "We work with product teams and enterprises in Ukraine, the EU and beyond." }
-  },
-  "career": {
-    "hero": {
-      "eyebrow": "Career",
-      "title": "Build your career at ettoryx",
-      "subtitle": "Join a senior team that values craft, ownership and growth."
+    "mission": {
+      "title": "Our mission",
+      "text": "To give businesses software they can rely on — crafted with the polish of a product studio and the discipline of an engineering house."
     },
-    "benefits": { "title": "Why work with us", "items": { "flexible": "Flexible remote-first work", "growth": "Real growth & learning budget", "projects": "Meaningful, modern projects", "team": "A supportive senior team" } },
-    "openings": "Open positions",
-    "noOpenings": "No open positions right now — send us your CV anyway.",
-    "detail": {
-      "about": "About the role",
-      "requirements": "Requirements",
-      "offer": "What we offer",
-      "apply": "Apply for this role"
+    "values": {
+      "title": "What we value",
+      "items": {
+        "quality": {
+          "t": "Quality over hype",
+          "d": "We ship things that last, not demos."
+        },
+        "ownership": {
+          "t": "Ownership",
+          "d": "We own outcomes, not just tickets."
+        },
+        "transparency": {
+          "t": "Transparency",
+          "d": "Weekly demos, clear communication, no surprises."
+        },
+        "partnership": {
+          "t": "Long-term partnership",
+          "d": "Most of our clients stay for years."
+        }
+      }
     },
-    "meta": {
-      "department": "Department",
-      "format": "Format",
-      "location": "Location"
+    "why": {
+      "title": "Why choose us",
+      "items": {
+        "one": "Senior-heavy teams",
+        "two": "Product & engineering under one roof",
+        "three": "Transparent, milestone-based delivery",
+        "four": "European quality, competitive rates"
+      }
+    },
+    "geography": {
+      "title": "Clients across Europe",
+      "text": "We work with product teams and enterprises in Ukraine, the EU and beyond."
     }
   },
   "contacts": {
@@ -237,11 +249,26 @@
     "updated": "Last updated: June 2026",
     "intro": "This placeholder privacy policy describes how ettoryx handles your data. Replace with your legally reviewed policy before launch.",
     "sections": {
-      "data": { "t": "Data we collect", "d": "Contact details you submit via our forms (name, email, phone, message and CV files)." },
-      "use": { "t": "How we use it", "d": "Solely to respond to your inquiry and, for applications, to evaluate your candidacy." },
-      "share": { "t": "Sharing", "d": "We do not sell your data. It may be processed by trusted infrastructure providers." },
-      "rights": { "t": "Your rights", "d": "You may request access, correction or deletion of your data at any time." },
-      "contact": { "t": "Contact", "d": "For privacy questions, email info@ettoryx.com." }
+      "data": {
+        "t": "Data we collect",
+        "d": "Contact details you submit via our forms (name, email, phone, message and CV files)."
+      },
+      "use": {
+        "t": "How we use it",
+        "d": "Solely to respond to your inquiry and, for applications, to evaluate your candidacy."
+      },
+      "share": {
+        "t": "Sharing",
+        "d": "We do not sell your data. It may be processed by trusted infrastructure providers."
+      },
+      "rights": {
+        "t": "Your rights",
+        "d": "You may request access, correction or deletion of your data at any time."
+      },
+      "contact": {
+        "t": "Contact",
+        "d": "For privacy questions, email info@ettoryx.com."
+      }
     }
   }
 }
