@@ -7,7 +7,8 @@ import { cms } from "@/lib/cms";
 import { buildAlternates, buildCanonicalUrl } from "@/lib/seo";
 import { PageHero } from "@/components/PageHero";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
-import { SectionHeader, TeamCard } from "@/components/cards";
+import { SectionHeader } from "@/components/cards";
+import { LeadershipSlider } from "@/components/LeadershipSlider";
 import { Placeholder } from "@/components/Placeholder";
 import { FinalCta } from "@/components/sections/FinalCta";
 
@@ -95,13 +96,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <Reveal>
           <SectionHeader eyebrow={t("team.leadership")} title={t("team.hero.title")} subtitle={t("about.geography.text")} />
         </Reveal>
-        <RevealGroup className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {leadership.map((m) => (
-            <RevealItem key={m.slug}>
-              <TeamCard member={m} locale={locale} />
-            </RevealItem>
-          ))}
-        </RevealGroup>
+        <div className="mt-12">
+          <LeadershipSlider members={leadership} locale={locale} />
+        </div>
       </section>
 
       <FinalCta />
