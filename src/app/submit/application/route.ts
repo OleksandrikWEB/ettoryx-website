@@ -4,11 +4,13 @@ import { render } from 'react-email';
 import { ApplicationNotification } from '@/emails/ApplicationNotification';
 import { cms } from '@/lib/cms';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const TO = 'info@ettoryx.com';
-const FROM = 'ettoryx <noreply@ettoryx.com>';
+const FROM = 'ettoryx <onboarding@resend.dev>';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const form = await request.formData();
 
   // Honeypot

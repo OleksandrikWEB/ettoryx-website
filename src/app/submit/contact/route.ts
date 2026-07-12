@@ -3,11 +3,13 @@ import { Resend } from 'resend';
 import { render } from 'react-email';
 import { ContactNotification } from '@/emails/ContactNotification';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const TO = 'info@ettoryx.com';
-const FROM = 'ettoryx <noreply@ettoryx.com>';
+const FROM = 'ettoryx <onboarding@resend.dev>';
+
+export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const form = await request.formData();
 
   // Honeypot: bots fill hidden fields
