@@ -3,12 +3,12 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useTranslations } from "next-intl";
 import { useRouter, Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input, Textarea, Select, Label, FieldError } from "@/components/ui/field";
+import { buildContactFormSchema, type ContactFormValues } from "@/app/zod/contactForm";
 
 export function ContactForm({
   services,
@@ -18,26 +18,21 @@ export function ContactForm({
   const t = useTranslations();
   const router = useRouter();
 
-  const schema = z.object({
-    name: z.string().min(2, t("form.errors.name")),
-    email: z.string().email(t("form.errors.email")),
-    phone: z.string().optional(),
-    service: z.string().min(1, t("form.errors.service")),
-    budget: z.string().optional(),
-    message: z.string().min(10, t("form.errors.message")),
-    consent: z.literal(true, { errorMap: () => ({ message: t("form.errors.consent") }) }),
-    company_website: z.string().optional(),
+  const schema = buildContactFormSchema({
+    name:    t("form.errors.name"),
+    email:   t("form.errors.email"),
+    service: t("form.errors.service"),
+    message: t("form.errors.message"),
+    consent: t("form.errors.consent"),
   });
-
-  type Values = z.infer<typeof schema>;
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<Values>({ resolver: zodResolver(schema) });
+  } = useForm<ContactFormValues>({ resolver: zodResolver(schema) });
 
-  const onSubmit = async (values: Values) => {
+  const onSubmit = async (values: ContactFormValues) => {
     const fd = new FormData();
     Object.entries(values).forEach(([k, v]) => fd.append(k, String(v ?? "")));
     const res = await fetch("/submit/contact", { method: "POST", body: fd });
@@ -78,7 +73,8 @@ export function ContactForm({
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <Label htmlFor="phone">{t("form.phoneOptional")}</Label>
-          <Input id="phone" data-testid="contact-phone" {...register("phone")} />
+          <Input id="phone" type="tel" data-testid="contact-phone" aria-invalid={!!errors.phone} {...register("phone")} />
+          <FieldError message={errors.phone?.message} />
         </div>
         <div>
           <Label htmlFor="service" required>{t("form.service")}</Label>
