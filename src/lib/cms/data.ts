@@ -456,54 +456,6 @@ export const products: Product[] = [
     url: 'https://crm.kdnx.cloud/',
     isMock: true,
   },
-  {
-    slug: 'layout',
-    name: 'ettoryx Layout',
-    icon: 'LayoutGrid',
-    category: { uk: 'Layout', en: 'Layout' },
-    short: {
-      uk: 'Конструктор інтерфейсів і дизайн-систем для швидкого старту продуктів.',
-      en: 'A UI and design-system builder to launch products faster.',
-    },
-    value: {
-      uk: 'Прототип за години, не тижні',
-      en: 'Prototype in hours, not weeks',
-    },
-    url: '#',
-    isMock: true,
-  },
-  {
-    slug: 'ai-automation',
-    name: 'ettoryx AI',
-    icon: 'Sparkles',
-    category: { uk: 'AI Automation', en: 'AI Automation' },
-    short: {
-      uk: 'Платформа AI-агентів для автоматизації бізнес-процесів.',
-      en: 'An AI-agent platform for business-process automation.',
-    },
-    value: {
-      uk: 'До 60% рутини — автоматично',
-      en: 'Up to 60% of routine automated',
-    },
-    url: '#',
-    isMock: true,
-  },
-  {
-    slug: 'saas',
-    name: 'ettoryx SaaS',
-    icon: 'Cloud',
-    category: { uk: 'SaaS', en: 'SaaS' },
-    short: {
-      uk: 'Готова SaaS-основа: білінг, ролі, мультитенант з коробки.',
-      en: 'A ready SaaS foundation: billing, roles and multi-tenancy out of the box.',
-    },
-    value: {
-      uk: 'Запуск SaaS удвічі швидше',
-      en: 'Launch your SaaS twice as fast',
-    },
-    url: '#',
-    isMock: true,
-  },
 ];
 
 export const caseStudies: CaseStudy[] = [

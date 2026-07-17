@@ -35,3 +35,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # ettoryx-website
+
+
+docker compose up -d --build - запуск апки і nginx 
+
+docker compose ps - чекаємо
+
+
+docker compose run --rm certbot certonly \
+  --webroot \
+  --webroot-path=/var/www/certbot \
+  -d ettoryx.com \
+  -d www.ettoryx.com \
+  --email info@ettoryx.com \
+  --agree-tos \
+  --no-eff-email      - отримання сертифіката для Let's Encrypt
