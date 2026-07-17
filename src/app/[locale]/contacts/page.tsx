@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { Mail, Phone, MessageCircle, MapPin, Clock, MapPinned } from "lucide-react";
+import { Mail, Phone, MessageCircle, MapPin, Clock, Linkedin } from "lucide-react";
 import type { Locale } from "@/i18n/routing";
 import { cms } from "@/lib/cms";
 import { buildAlternates, buildCanonicalUrl } from "@/lib/seo";
@@ -27,10 +27,11 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
   const services = await cms.getServices();
 
   const info = [
-    { Icon: Mail, label: t("contacts.info.email"), value: "info@ettoryx.com", href: "mailto:info@ettoryx.com" },
-    { Icon: Phone, label: t("contacts.info.phone"), value: t("contacts.info.phoneValue"), href: "tel:+380000000000" },
-    { Icon: MessageCircle, label: t("contacts.info.messengers"), value: "Telegram", href: "#" },
-    { Icon: MapPin, label: t("contacts.info.address"), value: t("contacts.info.addressValue") },
+    { Icon: Mail,           label: t("contacts.info.email"),      value: "info@ettoryx.com",          href: "mailto:info@ettoryx.com" },
+    { Icon: Phone,          label: t("contacts.info.phone"),      value: "+38 098 059 98 87",          href: "tel:+380980599887" },
+    { Icon: MessageCircle,  label: "Telegram",                    value: "@mykola_plikhtiak",          href: "https://t.me/mykola_plikhtiak" },
+    { Icon: Linkedin,       label: "LinkedIn",                    value: "linkedin.com/company/ettoryx", href: "https://www.linkedin.com/company/ettoryx" },
+    { Icon: MapPin,         label: t("contacts.info.address"),    value: "Івано-Франківськ, Україна" },
   ];
 
   return (
@@ -57,7 +58,7 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
                       {href ? (
                         <a
                           href={href}
-                          {...(href === "#" ? { "data-mock": "true", target: "_blank", rel: "noopener noreferrer" } : {})}
+                          {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                           className="text-body text-ink-primary transition-colors hover:text-gold-light"
                         >
                           {value}
@@ -74,17 +75,17 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
                 <Clock className="h-4 w-4 text-gold" /> {t("contacts.info.responseTime")}
               </div>
 
-              <div
-                role="img"
-                aria-label="Map showing ettoryx office location (placeholder)"
-                data-mock="true"
-                className="bg-grain mt-8 flex items-center justify-center rounded-2xl border border-line bg-bg-surface text-ink-secondary/50"
-                style={{ aspectRatio: "16/7" }}
-              >
-                <div className="flex flex-col items-center gap-2">
-                  <MapPinned className="h-8 w-8" />
-                  <span className="text-caption">{t("contacts.info.mapPlaceholder")}</span>
-                </div>
+              <div className="mt-8 overflow-hidden rounded-2xl border border-line" style={{ aspectRatio: "16/7" }}>
+                <iframe
+                  src="https://maps.google.com/maps?q=Ivano-Frankivsk,Ukraine&output=embed&z=13"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ivano-Frankivsk office location"
+                />
               </div>
             </div>
           </Reveal>
