@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import type { Locale } from "@/i18n/routing";
-import type { TeamMember } from "@/lib/cms/types";
-import { TeamCard } from "@/components/cards";
-import { cn } from "@/lib/utils";
+import * as React from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import type { Locale } from '@/i18n/routing';
+import type { TeamMember } from '@/lib/cms/types';
+import { TeamCard } from '@/components/cards';
+import { cn } from '@/lib/utils';
 
 export function LeadershipSlider({
   members,
@@ -16,7 +16,7 @@ export function LeadershipSlider({
   locale: Locale;
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
+    align: 'start',
     loop: false,
     dragFree: false,
   });
@@ -37,22 +37,26 @@ export function LeadershipSlider({
     if (!emblaApi) return;
     setSnaps(emblaApi.scrollSnapList());
     onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
     return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
+      emblaApi.off('select', onSelect);
+      emblaApi.off('reInit', onSelect);
     };
   }, [emblaApi, onSelect]);
 
   return (
     <div className="relative" data-testid="leadership-slider">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y">
+        {/*
+          -ml-6 + pl-6 on every slide (including first) means all slides have
+          identical inner width → identical aspect-square photo height.
+        */}
+        <div className="-ml-6 flex touch-pan-y items-stretch">
           {members.map((m) => (
             <div
               key={m.slug}
-              className="min-w-0 shrink-0 grow-0 basis-full pl-6 first:pl-0 sm:basis-1/2 lg:basis-1/3"
+              className="h-full min-w-0 shrink-0 grow-0 basis-full pl-6 sm:basis-1/2 lg:basis-1/3"
             >
               <TeamCard member={m} locale={locale} />
             </div>
@@ -60,45 +64,51 @@ export function LeadershipSlider({
         </div>
       </div>
 
-      <div className="mt-8 flex items-center justify-between">
-        <div className="flex gap-2">
-          {snaps.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              aria-label={`Go to slide ${i + 1}`}
-              onClick={() => emblaApi?.scrollTo(i)}
-              data-testid={`leadership-dot-${i}`}
-              className={cn(
-                "h-1.5 rounded-full transition-all duration-300",
-                i === selected ? "w-8 bg-gold" : "w-1.5 bg-line"
-              )}
-            />
-          ))}
-        </div>
+      {/*
+        Invisible overlay sized to the portrait photo area at each breakpoint.
+        Photos are aspect-square inside slides of width:
+          mobile → 1/1 of container  → overlay aspect 1:1
+          sm     → 1/2 of container  → overlay aspect 2:1
+          lg     → 1/3 of container  → overlay aspect 3:1
+        Arrows are pinned to top-1/2 = vertical centre of the photos.
+      */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 aspect-[1/1] sm:aspect-[2/1] lg:aspect-[3/1]">
+        <button
+          type="button"
+          onClick={() => emblaApi?.scrollPrev()}
+          disabled={!canPrev}
+          aria-label="Previous"
+          data-testid="leadership-prev"
+          className="pointer-events-auto absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-primary/80 text-ink-primary backdrop-blur-sm transition-colors hover:border-gold hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          type="button"
+          onClick={() => emblaApi?.scrollNext()}
+          disabled={!canNext}
+          aria-label="Next"
+          data-testid="leadership-next"
+          className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-primary/80 text-ink-primary backdrop-blur-sm transition-colors hover:border-gold hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
 
-        <div className="flex gap-3">
+      <div className="mt-8 flex justify-start gap-2">
+        {snaps.map((_, i) => (
           <button
+            key={i}
             type="button"
-            onClick={() => emblaApi?.scrollPrev()}
-            disabled={!canPrev}
-            aria-label="Previous"
-            data-testid="leadership-prev"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-ink-primary transition-colors hover:border-gold hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => emblaApi?.scrollNext()}
-            disabled={!canNext}
-            aria-label="Next"
-            data-testid="leadership-next"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line text-ink-primary transition-colors hover:border-gold hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
-        </div>
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => emblaApi?.scrollTo(i)}
+            data-testid={`leadership-dot-${i}`}
+            className={cn(
+              'h-1.5 rounded-full transition-all duration-300',
+              i === selected ? 'w-8 bg-gold' : 'w-1.5 bg-line',
+            )}
+          />
+        ))}
       </div>
     </div>
   );

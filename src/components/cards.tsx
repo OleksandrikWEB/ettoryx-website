@@ -169,7 +169,7 @@ export function TeamCard({
   locale: Locale;
 }) {
   return (
-    <div className="group" data-testid={`team-card-${member.slug}`}>
+    <div className="group flex h-full flex-col" data-testid={`team-card-${member.slug}`}>
       {member.photo ? (
         <div className="mb-4 aspect-square overflow-hidden rounded-2xl border border-line bg-bg-secondary">
           <Image
