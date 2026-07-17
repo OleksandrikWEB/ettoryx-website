@@ -18,10 +18,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'about.hero' });
+  const t = await getTranslations({ locale });
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: t('nav.about'),
+    description: t('about.hero.subtitle'),
     alternates: buildAlternates(locale, '/about'),
     openGraph: { url: buildCanonicalUrl(locale, '/about') },
   };

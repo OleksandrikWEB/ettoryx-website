@@ -10,10 +10,10 @@ import { FinalCta } from "@/components/sections/FinalCta";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "portfolio.hero" });
+  const t = await getTranslations({ locale });
   return {
-    title: t("title"),
-    description: t("subtitle"),
+    title: t("nav.portfolio"),
+    description: t("portfolio.hero.subtitle"),
     alternates: buildAlternates(locale, "/portfolio"),
     openGraph: { url: buildCanonicalUrl(locale, "/portfolio") },
   };

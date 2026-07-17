@@ -10,10 +10,10 @@ import { ContactForm } from "@/components/ContactForm";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "contacts.hero" });
+  const t = await getTranslations({ locale });
   return {
-    title: t("title"),
-    description: t("subtitle"),
+    title: t("nav.contacts"),
+    description: t("contacts.hero.subtitle"),
     alternates: buildAlternates(locale, "/contacts"),
     openGraph: { url: buildCanonicalUrl(locale, "/contacts") },
   };
