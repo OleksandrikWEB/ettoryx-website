@@ -43,9 +43,9 @@ export function Hero() {
         <Image
           src="/logo-mark.png"
           alt=""
-          width={620}
-          height={620}
-          className="h-[34rem] w-[34rem] object-contain opacity-[0.13]"
+          width={720}
+          height={398}
+          className="h-auto w-[42rem] object-contain opacity-[0.13]"
         />
       </motion.div>
 

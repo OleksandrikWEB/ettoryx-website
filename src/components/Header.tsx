@@ -23,10 +23,10 @@ function Logo() {
       <Image
         src="/logo-mark.png"
         alt="ettoryx"
-        width={44}
+        width={80}
         height={44}
         priority
-        className="h-9 w-9 object-contain"
+        className="h-8 w-auto object-contain"
       />
       <span className="flex flex-col leading-none">
         <span className="font-display text-lg font-extrabold tracking-tight text-ink-primary">
