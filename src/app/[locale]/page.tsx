@@ -59,7 +59,6 @@ export default async function HomePage({
   return (
     <>
       <Hero />
-
       {/* Services */}
       <section
         className="container-x py-20 lg:py-28"
@@ -80,7 +79,6 @@ export default async function HomePage({
           ))}
         </RevealGroup>
       </section>
-
       {/* About short */}
       <section className="container-x py-20 lg:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -112,7 +110,6 @@ export default async function HomePage({
           </Reveal>
         </div>
       </section>
-
       {/* Products */}
       <section
         className="container-x py-20 lg:py-28"
@@ -146,7 +143,6 @@ export default async function HomePage({
           ))}
         </RevealGroup>
       </section>
-
       {/* Portfolio */}
       <section
         className="container-x py-20 lg:py-28"
@@ -176,9 +172,8 @@ export default async function HomePage({
           ))}
         </RevealGroup>
       </section>
-
       {/* Stats */}
-      <section className="border-y border-line bg-bg-surface/40 py-20 lg:py-24">
+      {/* <section className="border-y border-line bg-bg-surface/40 py-20 lg:py-24">
         <div className="container-x">
           <Reveal>
             <SectionHeader
@@ -200,10 +195,9 @@ export default async function HomePage({
             ))}
           </RevealGroup>
         </div>
-      </section>
-
+      </section> */}
       {/* Tech marquee */}
-      <section className="py-16 lg:py-20">
+      {/* <section className="py-16 lg:py-20">
         <Reveal className="container-x">
           <p className="mb-8 text-center text-caption uppercase tracking-widest text-ink-secondary/70">
             {t('home.tech.title')}
@@ -219,9 +213,8 @@ export default async function HomePage({
             </span>
           ))}
         />
-      </section>
+      </section> */}
 
-      {/* Trust */}
       <section className="py-16 lg:py-20">
         <Reveal className="container-x">
           <p className="mb-3 text-center font-display text-h4 text-ink-primary">
@@ -242,9 +235,8 @@ export default async function HomePage({
           ))}
         />
       </section>
-
       {/* Testimonials */}
-      <section className="container-x py-20 lg:py-28">
+      {/* <section className="container-x py-20 lg:py-28">
         <Reveal>
           <SectionHeader
             eyebrow={t('home.testimonials.eyebrow')}
@@ -261,8 +253,7 @@ export default async function HomePage({
             company: tm.company,
           }))}
         />
-      </section>
-
+      </section> */}
       {/* Final CTA + contact form */}
       <section
         className="container-x py-20 lg:py-28"

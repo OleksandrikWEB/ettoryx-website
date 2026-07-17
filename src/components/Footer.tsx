@@ -16,7 +16,7 @@ export function Footer() {
       data-testid="site-footer"
     >
       <div className="container-x py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Image
               src="/logo-lockup.png"
@@ -56,31 +56,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-caption font-semibold uppercase tracking-wider text-ink-secondary">
-              {t('footer.company')}
-            </h4>
-            <ul className="mt-4 space-y-2.5">
-              <li>
-                <Link
-                  href="/team"
-                  className="text-body text-ink-secondary transition-colors hover:text-gold-light"
-                >
-                  {t('nav.team')}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy-policy"
-                  className="text-body text-ink-secondary transition-colors hover:text-gold-light"
-                  data-testid="footer-privacy"
-                >
-                  {t('cookie.policy')}
-                </Link>
-              </li>
             </ul>
           </div>
 
