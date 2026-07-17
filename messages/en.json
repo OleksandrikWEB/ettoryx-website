@@ -192,7 +192,7 @@
     "name": "Name",
     "email": "Email",
     "phone": "Phone / Messenger",
-    "phoneOptional": "Phone / Messenger (optional)",
+    "phoneOptional": "Phone / Messenger",
     "service": "Service / Direction",
     "servicePlaceholder": "Select a direction",
     "budget": "Budget range",

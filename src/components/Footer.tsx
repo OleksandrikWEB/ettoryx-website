@@ -21,9 +21,9 @@ export function Footer() {
             <Image
               src="/logo-lockup.png"
               alt="ettoryx"
-              width={280}
-              height={200}
-              className="h-24 w-auto object-contain object-left"
+              width={120}
+              height={120}
+              className="h-16 w-auto object-contain object-left"
             />
             <p className="mt-3 text-caption uppercase tracking-[0.25em] text-gold-light/80">
               Code that works, solutions that last
