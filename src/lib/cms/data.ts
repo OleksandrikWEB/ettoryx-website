@@ -656,30 +656,6 @@ export const team: TeamMember[] = [
     photo: '/team/oleksandr-n.png',
   },
   {
-    slug: 'jane-doe',
-    name: 'Jane Doe',
-    role: { uk: 'Senior Frontend Developer', en: 'Senior Frontend Developer' },
-    bio: {
-      uk: 'Спеціалізується на React, Next.js та дизайн-системах.',
-      en: 'Specializes in React, Next.js and design systems.',
-    },
-    leadership: false,
-    developer: true,
-    linkedin: '#',
-  },
-  {
-    slug: 'john-smith',
-    name: 'John Smith',
-    role: { uk: 'Lead Backend Engineer', en: 'Lead Backend Engineer' },
-    bio: {
-      uk: 'Будує надійні API та розподілені системи.',
-      en: 'Builds reliable APIs and distributed systems.',
-    },
-    leadership: false,
-    developer: true,
-    linkedin: '#',
-  },
-  {
     slug: 'maria-santos',
     name: 'Maria Santos',
     role: { uk: 'Head of Design', en: 'Head of Design' },
