@@ -48,6 +48,7 @@ export const cms = {
   // Team
   getTeam: async (): Promise<TeamMember[]> => team,
   getLeadership: async (): Promise<TeamMember[]> => team.filter((t) => t.leadership),
+  getDevelopers: async (): Promise<TeamMember[]> => team.filter((t) => t.developer),
 
   // Jobs
   getJobs: async (): Promise<JobListing[]> => jobs,

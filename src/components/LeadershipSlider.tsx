@@ -11,9 +11,11 @@ import { cn } from '@/lib/utils';
 export function LeadershipSlider({
   members,
   locale,
+  idPrefix = 'leadership',
 }: {
   members: TeamMember[];
   locale: Locale;
+  idPrefix?: string;
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
@@ -46,7 +48,7 @@ export function LeadershipSlider({
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative" data-testid="leadership-slider">
+    <div className="relative" data-testid={`${idPrefix}-slider`}>
       <div className="overflow-hidden" ref={emblaRef}>
         {/*
           -ml-6 + pl-6 on every slide (including first) means all slides have
@@ -78,7 +80,7 @@ export function LeadershipSlider({
           onClick={() => emblaApi?.scrollPrev()}
           disabled={!canPrev}
           aria-label="Previous"
-          data-testid="leadership-prev"
+          data-testid={`${idPrefix}-prev`}
           className="pointer-events-auto absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-primary/80 text-ink-primary backdrop-blur-sm transition-colors hover:border-gold hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
         >
           <ChevronLeft className="h-5 w-5" />
@@ -88,7 +90,7 @@ export function LeadershipSlider({
           onClick={() => emblaApi?.scrollNext()}
           disabled={!canNext}
           aria-label="Next"
-          data-testid="leadership-next"
+          data-testid={`${idPrefix}-next`}
           className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-bg-primary/80 text-ink-primary backdrop-blur-sm transition-colors hover:border-gold hover:text-gold-light disabled:cursor-not-allowed disabled:opacity-30"
         >
           <ChevronRight className="h-5 w-5" />
@@ -102,7 +104,7 @@ export function LeadershipSlider({
             type="button"
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => emblaApi?.scrollTo(i)}
-            data-testid={`leadership-dot-${i}`}
+            data-testid={`${idPrefix}-dot-${i}`}
             className={cn(
               'h-1.5 rounded-full transition-all duration-300',
               i === selected ? 'w-8 bg-gold' : 'w-1.5 bg-line',

@@ -37,6 +37,7 @@ export default async function AboutPage({
   const locale = (await getLocale()) as Locale;
   const t = await getTranslations();
   const leadership = await cms.getLeadership();
+  const developers = await cms.getDevelopers();
 
   const valueIcons = [Target, Handshake, Eye, ShieldCheck];
   const valueKeys = [
@@ -131,6 +132,18 @@ export default async function AboutPage({
           <LeadershipSlider members={leadership} locale={locale} />
         </div>
       </section>
+
+      {/* Developers Team */}
+      {developers.length > 0 && (
+        <section className="container-x pb-16 lg:pb-20" data-testid="developers-section">
+          <Reveal>
+            <SectionHeader eyebrow={t('team.developers')} title={t('team.developers')} />
+          </Reveal>
+          <div className="mt-12">
+            <LeadershipSlider members={developers} locale={locale} idPrefix="developers" />
+          </div>
+        </section>
+      )}
 
       <FinalCta />
     </>

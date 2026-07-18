@@ -65,6 +65,7 @@ export interface TeamMember {
   role: LocalizedString;
   bio: LocalizedString;
   leadership: boolean;
+  developer?: boolean;
   linkedin: string;
   photo?: string;
 }

@@ -27,7 +27,8 @@ export default async function TeamPage({ params }: { params: Promise<{ locale: s
   const t = await getTranslations();
   const all = await cms.getTeam();
   const leadership = all.filter((m) => m.leadership);
-  const rest = all.filter((m) => !m.leadership);
+  const developers = all.filter((m) => m.developer);
+  const rest = all.filter((m) => !m.leadership && !m.developer);
 
   const personSchemas = all.map((m) =>
     buildPersonSchema({
@@ -53,14 +54,25 @@ export default async function TeamPage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="container-x pb-16 lg:pb-20">
-        <Reveal><SectionHeader title={t("team.everyone")} /></Reveal>
-        <RevealGroup className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {rest.map((m) => (
-            <RevealItem key={m.slug}><TeamCard member={m} locale={locale} /></RevealItem>
-          ))}
-        </RevealGroup>
-      </section>
+      {developers.length > 0 && (
+        <section className="container-x pb-16 lg:pb-20" data-testid="developers-section">
+          <Reveal><SectionHeader title={t("team.developers")} /></Reveal>
+          <div className="mt-10">
+            <LeadershipSlider members={developers} locale={locale} idPrefix="developers" />
+          </div>
+        </section>
+      )}
+
+      {rest.length > 0 && (
+        <section className="container-x pb-16 lg:pb-20">
+          <Reveal><SectionHeader title={t("team.everyone")} /></Reveal>
+          <RevealGroup className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {rest.map((m) => (
+              <RevealItem key={m.slug}><TeamCard member={m} locale={locale} /></RevealItem>
+            ))}
+          </RevealGroup>
+        </section>
+      )}
 
       <FinalCta />
     </>
